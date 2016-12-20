@@ -7,14 +7,7 @@ var app = new Vue({
         playerColor: 'green',
         monsterHealth: 100,
         monsterColor: 'green',
-        logs: [
-            {
-                message: "Welcome to Player Vs Monster!"
-            },
-            {
-                message: "Click Start New Game to begin to fight!"
-            }
-        ]
+        logs: []
     },
     watch: {
         playerHealth: function(){
