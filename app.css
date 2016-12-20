@@ -35,6 +35,16 @@
     margin: 5px;
 }
 
+.log ul li:nth-child(odd){
+    color: red;
+    background-color: #ffc0c1;
+}
+
+.log ul li:nth-child(even){
+    color: blue;
+    background-color: #e4e8ff;
+}
+
 .log ul .player-turn {
     color: blue;
     background-color: #e4e8ff;
