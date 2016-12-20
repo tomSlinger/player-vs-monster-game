@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Monster Slayer</title>
+    <script src="https://npmcdn.com/vue/dist/vue.js"></script>
+    <link rel="stylesheet" href="foundation.min.css">
+    <link rel="stylesheet" href="app.css">
+</head>
+<body>
+<div id="app">
+    <section class="row">
+        <div class="small-6 columns">
+            <h1 class="text-center">YOU</h1>
+            <div class="healthbar" :style="{width: playerHealth + '%'}">
+                <div class="healthbar text-center" style="background-color: green; margin: 0; color: white;" :style="{backgroundColor: playerColor}">
+                    {{ playerHealth }}
+                </div>
+            </div>
+        </div>
+        <div class="small-6 columns">
+            <h1 class="text-center">MONSTER</h1>
+            <div class="healthbar" :style="{width: monsterHealth + '%'}">
+                <div class="healthbar text-center" style="background-color: green; margin: 0; color: white;" :style="{backgroundColor: monsterColor}">
+                    {{ monsterHealth }}
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="row controls" v-if="startBtn">
+        <div class="small-12 columns">
+            <button id="start-game" @click="startNewGame">START NEW GAME</button>
+        </div>
+    </section>
+    <section class="row controls" v-if="gameStarted">
+        <div class="small-12 columns">
+            <button id="attack" @click="attackRound">ATTACK</button>
+            <button id="special-attack" @click="specialAttackRound">SPECIAL ATTACK</button>
+            <button id="heal" @click="healRound">HEAL</button>
+            <button id="give-up" @click="giveUp">GIVE UP</button>
+        </div>
+    </section>
+    <section class="row log">
+        <div class="small-12 columns">
+            <ul>
+                <li v-for="log in logs">
+                    {{ log.message }}
+                </li>
+            </ul>
+        </div>
+    </section>
+</div>
+<script src="app.js"></script>
+</body>
+</html>
