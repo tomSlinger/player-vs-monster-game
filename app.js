@@ -71,8 +71,8 @@ var app = new Vue({
             this.checkVictoryStatus();
         },
         healRound: function(){
-            //Player Heal - Between 5 and 15
-            var playerHeal = Math.floor((Math.random() * 10) + 5);
+            //Player Heal - Always heal 10 points of health
+            var playerHeal = 10;
 
             //Check for overhealing
             if(this.playerHealth + playerHeal > 100){
