@@ -82,12 +82,12 @@ var app = new Vue({
                 //Apply the Healing
                 this.playerHealth += playerHeal;
                 //Push Healing to log
-                this.logs.unshift({message: "Player healed for " + playerHeal + "."});
+                this.logs.unshift({message: "Player healed " + playerHeal + " points of health."});
             }else{
                 //Apply the Healing
                 this.playerHealth += playerHeal;
                 //Push Healing to log
-                this.logs.unshift({message: "Player healed for " + playerHeal + "."});
+                this.logs.unshift({message: "Player healed " + playerHeal + " points of health."});
             }
             
             //Monster Round
