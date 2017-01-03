@@ -50,7 +50,7 @@ var app = new Vue({
             //Do the damage...
             this.monsterHealth -= playerDmg;
             //Push Damage to log
-            this.logs.unshift({message: "Player hurt the Monster for " + playerDmg + " damage using a Standard Attack."});
+            this.logMessage("Player hurt the Monster for " + playerDmg + " damage using a Standard Attack.");
 
             //Monster Round
             this.monsterRound();
@@ -64,7 +64,7 @@ var app = new Vue({
             //Do the damage...
             this.monsterHealth -= playerDmg;
             //Push Damage to log
-            this.logs.unshift({message: "Player hurt the Monster for " + playerDmg + " damage using a Special Attack."});
+            this.logMessage("Player hurt the Monster for " + playerDmg + " damage using a Special Attack.");
 
             //Monster Round
             this.monsterRound();
@@ -96,8 +96,11 @@ var app = new Vue({
 
         },
         giveUp: function(){
-            alert("You ran away like a little girl... Try Again?");
-            this.startNewGame();
+            if(confirm("You ran away like a little girl... Try Again?")){
+                this.startNewGame();
+            }else{
+                return;
+            }
         },
         monsterRound: function(){
             //Monster Damage - Attack between 1 and 15 dmg.
