@@ -116,12 +116,22 @@ var app = new Vue({
         checkVictoryStatus: function(){
             //Player Won
             if(this.monsterHealth <= 0){
-                alert("Congrats, you defeated the monster! Start a new game?");
-                this.startNewGame();
+                if(confirm("Congrats, you defeated the monster! Start a new game?")){
+                    this.startNewGame();
+                }else{
+                    //Else, show the start btn, hide the in game buttons, but keep the log.
+                    this.startBtn = true;
+                    this.gameStarted = false;
+                }
             };
             if(this.playerHealth <= 0){
-                alert("Oh no! The monsted killed you! Start a new game?");
-                this.startNewGame();
+                if(confirm("Oh no! The monsted killed you! Start a new game?")){
+                    this.startNewGame();
+                }else{
+                    //Else, show the start btn, hide the in game buttons, but keep the log.
+                    this.startBtn = true;
+                    this.gameStarted = false;
+                }
             }
         },
         logMessage: function($message){
