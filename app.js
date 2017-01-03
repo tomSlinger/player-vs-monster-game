@@ -85,7 +85,7 @@ var app = new Vue({
                 //Apply the Healing
                 this.playerHealth += playerHeal;
             }
-            
+
             //Push Healing to log
             this.logMessage("Player healed " + playerHeal + " points of health.");
             
@@ -100,6 +100,7 @@ var app = new Vue({
             if(confirm("You ran away like a little girl... Try Again?")){
                 this.startNewGame();
             }else{
+                //Else, show the start btn, hide the in game buttons, but keep the log.
                 this.startBtn = true;
                 this.gameStarted = false;
             }
