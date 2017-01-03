@@ -125,7 +125,6 @@ var app = new Vue({
                     this.startNewGame();
                 }else{
                     //Else, show the start btn, hide the in game buttons, but keep the log.
-                    this.startBtn = true;
                     this.gameStarted = false;
                 }
             }
