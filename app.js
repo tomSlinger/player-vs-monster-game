@@ -71,7 +71,7 @@ var app = new Vue({
             this.checkVictoryStatus();
         },
         healRound: function(){
-            //Player Heal - Always heal 10 points of health
+            //Player Heal - Always heal 10 points of health, except for overhealing
             var playerHeal = 10;
 
             //Check for overhealing
