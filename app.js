@@ -107,7 +107,8 @@ var app = new Vue({
             //Do the damage...
             this.playerHealth -= monsterDmg;
             //Push Damage to log
-            this.logs.unshift({message: "Monster hurt the Player for " + monsterDmg + " damage."})
+            //this.logs.unshift({message: "Monster hurt the Player for " + monsterDmg + " damage."})
+            this.logMessage("Monster hurt the Player for " + monsterDmg + " damage.");
         },
         checkVictoryStatus: function(){
             //Player Won
