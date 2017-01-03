@@ -119,6 +119,11 @@ var app = new Vue({
                 alert("Oh no! The monsted killed you! Start a new game?");
                 this.startNewGame();
             }
+        },
+        logMessage: function($message){
+            this.logs.unshift({
+                message: $message
+            })
         }
     }
 })
