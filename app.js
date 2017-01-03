@@ -2,7 +2,6 @@ var app = new Vue({
     el:'#app',
     data: {
         gameStarted: false,
-        startBtn: true,
         playerHealth: 100,
         playerColor: 'green',
         monsterHealth: 100,
@@ -100,7 +99,6 @@ var app = new Vue({
                 this.startNewGame();
             }else{
                 //Else, show the start btn, hide the in game buttons, but keep the log.
-                this.startBtn = true;
                 this.gameStarted = false;
             }
         },
@@ -119,7 +117,6 @@ var app = new Vue({
                     this.startNewGame();
                 }else{
                     //Else, show the start btn, hide the in game buttons, but keep the log.
-                    this.startBtn = true;
                     this.gameStarted = false;
                 }
             };
