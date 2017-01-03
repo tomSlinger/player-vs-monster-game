@@ -37,7 +37,6 @@ var app = new Vue({
         startNewGame: function(){
             //When we start a new game, we want to completely reset everything...
             this.gameStarted = !this.gameStarted;
-            this.startBtn = !this.gameStarted;
             //Reset Player and Monster Health
             this.playerHealth = 100;
             this.monsterHealth = 100;
