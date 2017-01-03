@@ -99,7 +99,8 @@ var app = new Vue({
             if(confirm("You ran away like a little girl... Try Again?")){
                 this.startNewGame();
             }else{
-                return;
+                this.startBtn = true;
+                this.gameStarted = false;
             }
         },
         monsterRound: function(){
