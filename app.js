@@ -81,14 +81,12 @@ var app = new Vue({
                 playerHeal = 100 - this.playerHealth;
                 //Apply the Healing
                 this.playerHealth += playerHeal;
-                //Push Healing to log
-                this.logs.unshift({message: "Player healed " + playerHeal + " points of health."});
             }else{
                 //Apply the Healing
                 this.playerHealth += playerHeal;
-                //Push Healing to log
-                this.logs.unshift({message: "Player healed " + playerHeal + " points of health."});
             }
+            //Push Healing to log
+            this.logMessage("Player healed " + playerHeal + " points of health.");
             
             //Monster Round
             this.monsterRound();
@@ -107,7 +105,6 @@ var app = new Vue({
             //Do the damage...
             this.playerHealth -= monsterDmg;
             //Push Damage to log
-            //this.logs.unshift({message: "Monster hurt the Player for " + monsterDmg + " damage."})
             this.logMessage("Monster hurt the Player for " + monsterDmg + " damage.");
         },
         checkVictoryStatus: function(){
